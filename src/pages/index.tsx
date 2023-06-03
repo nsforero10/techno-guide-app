@@ -1,5 +1,8 @@
 import { Inter } from 'next/font/google'
 import SubgenresList from '../components/SubgenresList'
+import * as dotenv from 'dotenv' 
+
+dotenv.config({ path: '.env'})
 
 const inter = Inter({ subsets: ['latin'] })
 
