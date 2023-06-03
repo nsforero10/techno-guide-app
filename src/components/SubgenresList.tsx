@@ -9,7 +9,12 @@ export default function SubgenresList() {
     const [ loading, setLoading ] = useState(true);
     useEffect(() => {
     setLoading(true);
-    fetch(process.env.API_URL || API_URL)
+    fetch(process.env.API_URL || API_URL, {
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
         setSubgenres(data);
