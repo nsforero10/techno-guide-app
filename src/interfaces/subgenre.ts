@@ -1,5 +1,5 @@
-export default interface ISubgenre {
-  id: number;
+export interface SubgenreType {
+  id: string;
   name: string;
   description: string;
   linkPlaylist: string;
